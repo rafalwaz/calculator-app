@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="calculator">
+
+        <div class="display"></div>
+        <button class="btn">C</button>
+        <button class="btn">⌫</button>
+        <button class="btn">÷</button>
+        <button class="btn">×</button>
+
+        <button class="btn">7</button>
+        <button class="btn">8</button>
+        <button class="btn">9</button>
+        <button class="btn">-</button>
+
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+        <button class="btn">6</button>
+        <button class="btn">+</button>
+
+        <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+        <button class="btn operator" style="grid-row: span 2;">=</button>
+
+        <button class="btn" style="grid-column: span 2;">0</button>
+        <button class="btn">.</button>
+    </div>
+
+    <div class="history-panel" id="historia-pasek">
+        <h3 style="margin-top: 0; color: white; font-family: sans-serif; opacity: 0.9;">Historia obliczeń</h3>
+        <ul id="history-list"></ul>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

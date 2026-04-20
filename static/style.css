@@ -1,0 +1,125 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #1f2739, #0a0e14);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: white;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 5px;
+    width: 350px;
+    padding: 20px;
+    background: rgb(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.display {
+    grid-column: span 4;
+    padding: 20px;
+    font-size: 2rem;
+    text-align: right;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    height: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    min-width: 0;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.operator {
+    background: #ff9500;
+    font-weight: bold;
+}
+
+.operator:hover {
+    background: #ffaa33;
+}
+
+.history-panel {
+    display: none;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    width: 400px;
+    margin-top: 0px;
+    padding: 15px;
+    box-sizing: border-box;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.history-panel.aktywna {
+    display: block;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#history-list li {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-align: right;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+#history-list li:hover {
+    background: rgba(255, 150, 0, 0.6);
+    color: white;
+    transform: scale(1.05);
+}
+
+.history-panel::-webkit-scrollbar {
+    width: 10px;
+}
+
+.history-panel::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.history-panel::-webkit-scrollbar-thumb {
+    background: rgba(255, 149, 0, 0.8);
+    border-radius: 10px;
+}
+
+.history-panel::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 149, 0, 1);
+}

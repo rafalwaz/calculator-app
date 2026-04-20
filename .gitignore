@@ -1,0 +1,6 @@
+# Tarcza ignorująca GitHuba - to co tu jest nie poleci w siec
+.env
+__pycache__/
+venv/
+.venv/
+*.pyc
